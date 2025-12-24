@@ -40,17 +40,29 @@ public class PlayerMove : MonoBehaviour
         //Note: Movement is done via up/down/left/right, corresponding to +z/-z/+x/-x, respectively
         if (moveDir.sqrMagnitude <= float.Epsilon)
         {
-            playerRb.linearVelocity = Vector3.zero;
+            playerRb.linearVelocity = new Vector3(
+                0,
+                playerRb.linearVelocity.y,
+                0
+            );
             return;
         }
 
-        Vector3 playerVelocity = new Vector3(
-            moveDir.x,
-            playerRb.linearVelocity.y,
-            moveDir.y
-        ) * moveSpeed;
+        Vector3 currentFlatVelocity = new Vector3(
+            playerRb.linearVelocity.x,
+            0,
+            playerRb.linearVelocity.z
+            );
 
-        playerRb.linearVelocity = playerVelocity;
+        Vector3 playerVelocity = new Vector3(
+            moveDir.x * moveSpeed,
+            0,
+            moveDir.y * moveSpeed
+        );
+
+        Vector3 changeInVelocity = playerVelocity - currentFlatVelocity;
+
+        playerRb.AddForce(changeInVelocity, ForceMode.VelocityChange);
         RotateTowardsMovement();
     }
 
