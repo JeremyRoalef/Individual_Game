@@ -182,7 +182,7 @@
             "id": "833d2ad8-f7ee-4141-a583-06e64b533839",
             "actions": [
                 {
-                    "name": "New action",
+                    "name": "Primary Action",
                     "type": "Button",
                     "id": "ae5fc9b4-5895-4180-9a8b-55819d1a289c",
                     "expectedControlType": "",
@@ -194,12 +194,12 @@
             "bindings": [
                 {
                     "name": "",
-                    "id": "f823f8df-1622-40d3-ad70-05d3f3a38ee6",
-                    "path": "",
+                    "id": "795eb3ee-ff9d-4de2-861b-548626a6ac1c",
+                    "path": "<Mouse>/leftButton",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "New action",
+                    "action": "Primary Action",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
