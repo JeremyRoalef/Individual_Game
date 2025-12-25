@@ -210,7 +210,7 @@
             "id": "336ee2fd-3f43-4564-a7c0-5c4a7137914f",
             "actions": [
                 {
-                    "name": "New action",
+                    "name": "PlaceBuild",
                     "type": "Button",
                     "id": "63a680a9-3b41-46f5-9e3b-361c7ed291ba",
                     "expectedControlType": "",
@@ -223,11 +223,11 @@
                 {
                     "name": "",
                     "id": "d04fcd69-17ec-4dfc-aa91-2e22b7dae25c",
-                    "path": "",
+                    "path": "<Mouse>/leftButton",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "New action",
+                    "action": "PlaceBuild",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

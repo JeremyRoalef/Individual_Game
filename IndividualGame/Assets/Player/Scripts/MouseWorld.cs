@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 public class MouseWorld : MonoBehaviour
 {
     //Static reference to the mouse position
-    static MouseWorld instance;
+    public static MouseWorld instance;
 
     [SerializeField]
     LayerMask collisionInteractionLayers;
