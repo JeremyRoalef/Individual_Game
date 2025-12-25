@@ -14,6 +14,9 @@ public class GameState : MonoBehaviour
     bool toggleMove;
     bool canMove = true;
 
+    [SerializeField]
+    bool toggleCombat;
+    bool canCombat = false;
 
     static readonly Dictionary<ActionMap, string> ACTION_MAPS = new Dictionary<ActionMap, string>
     {
@@ -43,6 +46,13 @@ public class GameState : MonoBehaviour
             canMove = !canMove;
             ToggleActionMap(ActionMap.World, canMove);
             toggleMove = false;
+        }
+        if (toggleCombat)
+        {
+            canCombat = !canCombat;
+            Debug.Log("Combat enabled: " + canCombat);
+            ToggleActionMap(ActionMap.Combat, canCombat);
+            toggleCombat = false;
         }
     }
 
